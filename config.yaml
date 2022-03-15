@@ -1,0 +1,110 @@
+baseURL: "https://presentmonkey.me/"
+title: Presentmonkey's Site
+paginate: 5
+theme: hugo-PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+taxonomies:
+ category: categories
+ series: series
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: PresentMonkey's Site
+  description: "My personal website"
+  keywords: [Blog, Portfolio, PaperMod]
+  # author: ["Me", "You"] # multiple authors
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "/images/presentmonkey.webp"
+    favicon16x16: "<link / abs url>"
+    favicon32x32: "<link / abs url>"
+    apple_touch_icon: "<link / abs url>"
+    safari_pinned_tab: "<link / abs url>"
+
+  label:
+    text: "Home"
+    icon: /images/presentmonkey.webp
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: PresentMonkey
+    subtitle: "Hi, I'm Patrick aka Presentmonkey. "
+    imageUrl: "/images/presentmonkey.webp"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: MyProfilePic
+    buttons:
+     - name: About Me
+       url: about-me
+     - name: Blog
+       url: posts
+    
+
+
+  socialIcons:
+    - name: Email
+      url: "mailto:contact@presentmonkey.me"
+    - name: Github
+      url: "https://github.com/PresentMonkey"
+    - name: Discord
+      url: "https://discord.com/users/222482269829332992"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  #editPost:
+    #URL: "https://github.com/<path_to_repo>/content"
+    #Text: "Suggest Changes" # edit text
+    #appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifier: About Me
+      name: About Me
+      url: /about-me/
+      weight: 1
