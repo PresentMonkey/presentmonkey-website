@@ -47,7 +47,7 @@ $ ls
 Docker_Volumes  lost+found
 ```
 
-Using `tree` in `Docker_Volumes revealed what it was for, holding data about the blockchain.
+Using `tree` in `Docker_Volumes` revealed what it was for, holding data about the blockchain.
 
 ```none
 $ tree . -d
