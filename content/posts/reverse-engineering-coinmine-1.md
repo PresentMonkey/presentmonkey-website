@@ -120,7 +120,7 @@ Now I needed to combine those into one image. I found [this](https://serverfault
 To start I created a sparse image with the appropriate size:
 
 ```none
-$ dd if=/dev/zero of=coinmine.img bs=1 count=0 seek=16G
+dd if=/dev/zero of=coinmine.img bs=1 count=0 seek=16G
 ```
 
 Next, created partitions using `fdisk`, with the appropriate size of partitions corresponding to the partition images we created with gnome disk utility, which resulted in:
@@ -177,7 +177,6 @@ The reasoning behind how this works is a little complicated, but basically what 
 
 For the VM I'm using Virt Manager, a GUI frontend to QEMU/KVM. Setup is just like normal, it needs 4GB of memory and be in UEFI mode not legacy BIOS mode. When the VM starts though, we'll run into a bit of an issue. Because we never moved over the 4th partition, it's trying to mount it and failing. Therefore it drops us in emergency mode, where we can login as root and make the edits needed to `fstab`. All that's needed is adding `nofail` to the mount, so now it looks like this: 
 
-```none
 ```none
 # <file system> <dir> <type> <options> <dump> <pass>
 # UUID=b743e635-a3ef-4935-a1ba-bb84f90b16b1
