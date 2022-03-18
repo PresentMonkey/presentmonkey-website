@@ -1,0 +1,7 @@
+{{ $images := .Params }}
+
+<div class="gallery" >
+    {{range $images}}
+        <img src={{ . }}></img>
+    {{end}}
+</div>
