@@ -4,6 +4,6 @@ draft: false
 ShowReadingTime: false
 ---
 
-* Current IT student in the NYC Metro Area. 
-* Particularly interested in networking, automation, and the internet.
-* Other interests include FPV Drones, engineering, and machining.
+* Mechanical Engineering student at ERAU
+* Interested in IT as well, particularly in networking and automation 
+* Other interests include FPV Drones, rocketry, amateur radio and machining.
